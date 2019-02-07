@@ -1,0 +1,21 @@
+35a36,39
+>   <Computer computerType="linuxmachine"
+>             domain="localdomain"
+>             name="node000022"
+>             netAddress="1.0.0.22"/>
+446a451,457
+>    <Instance computer="node000022"
+>              directory="/var/lib/HPCCSystems/mydafilesrv"
+>              name="s"
+>              netAddress="1.0.0.22"
+>              parallelRequestLimit="20"
+>              throttleCPULimit="75"
+>              throttleDelayMs="5000"/>
+1004a1016,1020
+>    <Instance computer="node000022"
+>              directory="/var/lib/HPCCSystems/myftslave"
+>              name="s"
+>              netAddress="1.0.0.22"
+>              program="/opt/HPCCSystems/bin/ftslave"/>
+1167a1184
+>    <RoxieServerProcess computer="node000022" name="s" netAddress="1.0.0.22"/>

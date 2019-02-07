@@ -1,0 +1,293 @@
+34,35c34,63
+<             name="node002015"
+<             netAddress="."/>
+---
+>             name="node000021"
+>             netAddress="1.0.0.21"/>
+>   <Computer computerType="linuxmachine"
+>             domain="localdomain"
+>             name="node000022"
+>             netAddress="1.0.0.22"/>
+>   <Computer computerType="linuxmachine"
+>             domain="localdomain"
+>             name="node000023"
+>             netAddress="1.0.0.23"/>
+>   <Computer computerType="linuxmachine"
+>             domain="localdomain"
+>             name="node000024"
+>             netAddress="1.0.0.24"/>
+>   <Computer computerType="linuxmachine"
+>             domain="localdomain"
+>             name="node000025"
+>             netAddress="1.0.0.25"/>
+>   <Computer computerType="linuxmachine"
+>             domain="localdomain"
+>             name="node000026"
+>             netAddress="1.0.0.26"/>
+>   <Computer computerType="linuxmachine"
+>             domain="localdomain"
+>             name="node000027"
+>             netAddress="1.0.0.27"/>
+>   <Computer computerType="linuxmachine"
+>             domain="localdomain"
+>             name="node000028"
+>             netAddress="1.0.0.28"/>
+440c468
+<    <Instance computer="node002015"
+---
+>    <Instance computer="node000021"
+442,443c470,520
+<              name="s1"
+<              netAddress="."
+---
+>              name="s"
+>              netAddress="1.0.0.21"
+>              parallelRequestLimit="20"
+>              throttleCPULimit="75"
+>              throttleDelayMs="5000"/>
+>    <Instance computer="node000022"
+>              directory="/var/lib/HPCCSystems/mydafilesrv"
+>              name="s_2"
+>              netAddress="1.0.0.22"
+>              parallelRequestLimit="20"
+>              throttleCPULimit="75"
+>              throttleDelayMs="5000"/>
+>    <Instance computer="node000023"
+>              directory="/var/lib/HPCCSystems/mydafilesrv"
+>              name="s_3"
+>              netAddress="1.0.0.23"
+>              parallelRequestLimit="20"
+>              throttleCPULimit="75"
+>              throttleDelayMs="5000"/>
+>    <Instance computer="node000024"
+>              directory="/var/lib/HPCCSystems/mydafilesrv"
+>              name="s_4"
+>              netAddress="1.0.0.24"
+>              parallelRequestLimit="20"
+>              throttleCPULimit="75"
+>              throttleDelayMs="5000"/>
+>    <Instance computer="node000025"
+>              directory="/var/lib/HPCCSystems/mydafilesrv"
+>              name="s_5"
+>              netAddress="1.0.0.25"
+>              parallelRequestLimit="20"
+>              throttleCPULimit="75"
+>              throttleDelayMs="5000"/>
+>    <Instance computer="node000026"
+>              directory="/var/lib/HPCCSystems/mydafilesrv"
+>              name="s_6"
+>              netAddress="1.0.0.26"
+>              parallelRequestLimit="20"
+>              throttleCPULimit="75"
+>              throttleDelayMs="5000"/>
+>    <Instance computer="node000027"
+>              directory="/var/lib/HPCCSystems/mydafilesrv"
+>              name="s_7"
+>              netAddress="1.0.0.27"
+>              parallelRequestLimit="20"
+>              throttleCPULimit="75"
+>              throttleDelayMs="5000"/>
+>    <Instance computer="node000028"
+>              directory="/var/lib/HPCCSystems/mydafilesrv"
+>              name="s_8"
+>              netAddress="1.0.0.28"
+453c530
+<    <Instance computer="node002015"
+---
+>    <Instance computer="node000021"
+455,456c532,533
+<              name="s1"
+<              netAddress="."
+---
+>              name="s"
+>              netAddress="1.0.0.21"
+468c545
+<    <Instance computer="node002015"
+---
+>    <Instance computer="node000022"
+470,471c547,548
+<              name="s1"
+<              netAddress="."/>
+---
+>              name="s"
+>              netAddress="1.0.0.22"/>
+497c574,575
+<    <ServerList server="."/>
+---
+>    <ServerList server=""/>
+>    <ServerList name="s" server="1.0.0.23"/>
+516c594
+<    <Instance computer="node002015"
+---
+>    <Instance computer="node000022"
+518,519c596,597
+<              name="s1"
+<              netAddress="."/>
+---
+>              name="s"
+>              netAddress="1.0.0.22"/>
+532c610
+<    <Instance computer="node002015"
+---
+>    <Instance computer="node000023"
+534,535c612,613
+<              name="s1"
+<              netAddress="."/>
+---
+>              name="s"
+>              netAddress="1.0.0.23"/>
+542c620
+<    <Instance computer="node002015"
+---
+>    <Instance computer="node000022"
+544,545c622,623
+<              name="s1"
+<              netAddress="."/>
+---
+>              name="s"
+>              netAddress="1.0.0.22"/>
+774c852
+<    <Instance computer="node002015"
+---
+>    <Instance computer="node000024"
+776d853
+<              FQDN=""
+778c855
+<              netAddress="."/>
+---
+>              netAddress="1.0.0.24"/>
+1000c1077,1097
+<    <Instance computer="node002015"
+---
+>    <Instance computer="node000023"
+>              directory="/var/lib/HPCCSystems/myftslave"
+>              name="s"
+>              netAddress="1.0.0.23"
+>              program="/opt/HPCCSystems/bin/ftslave"/>
+>    <Instance computer="node000025"
+>              directory="/var/lib/HPCCSystems/myftslave"
+>              name="s_2"
+>              netAddress="1.0.0.25"
+>              program="/opt/HPCCSystems/bin/ftslave"/>
+>    <Instance computer="node000026"
+>              directory="/var/lib/HPCCSystems/myftslave"
+>              name="s_3"
+>              netAddress="1.0.0.26"
+>              program="/opt/HPCCSystems/bin/ftslave"/>
+>    <Instance computer="node000027"
+>              directory="/var/lib/HPCCSystems/myftslave"
+>              name="s_4"
+>              netAddress="1.0.0.27"
+>              program="/opt/HPCCSystems/bin/ftslave"/>
+>    <Instance computer="node000028"
+1002,1003c1099,1100
+<              name="s1"
+<              netAddress="."
+---
+>              name="s_5"
+>              netAddress="1.0.0.28"
+1020c1117
+<                 copyResources="false"
+---
+>                 copyResources="true"
+1041c1138
+<                 directory="/var/lib/HPCCSystems/myroxie"
+---
+>                 directory="/var/lib/HPCCSystems/roxie/"
+1062c1159
+<                 lazyOpen="true"
+---
+>                 lazyOpen="smart"
+1157c1254
+<                      name="farm1"
+---
+>                      name="farm"
+1163c1260
+<                      name="farm2"
+---
+>                      name="farm_2"
+1167c1264,1265
+<    <RoxieServerProcess computer="node002015" name="node002015" netAddress="."/>
+---
+>    <RoxieServerProcess computer="node000025" name="s" netAddress="1.0.0.25"/>
+>    <RoxieServerProcess computer="node000026" name="s_2" netAddress="1.0.0.26"/>
+1220,1227c1318,1321
+<                       xrefMaxScanThreads="500">
+<    <Instance computer="node002015"
+<              directory="/var/lib/HPCCSystems/mysasha"
+<              name="s1"
+<              netAddress="."
+<              port="8877"/>
+<   </SashaServerProcess>
+<   <ThorCluster autoAffinity="true"
+---
+>                       xrefMaxScanThreads="500"/>
+>   <ThorCluster affinity=""
+>                allowedPipePrograms="*"
+>                autoAffinity="true"
+1231a1326
+>                checkPointRecovery="false"
+1233c1328
+<                computer="node002015"
+---
+>                computer="node000027"
+1234a1330
+>                defaultOutputNodeGroup=""
+1235a1332
+>                externalProgDir=""
+1236a1334,1335
+>                globalMemorySize=""
+>                heapMasterUseHugePages=""
+1240c1339,1342
+<                localThor="true"
+---
+>                httpCallerIdHeader="HPCC-Caller-Id"
+>                httpGlobalIdHeader="HPCC-Global-Id"
+>                idleRestartPeriod="480"
+>                localThor="false"
+1241a1344
+>                masterMemorySize=""
+1242a1346,1347
+>                maxActivityCores="0"
+>                memorySpillAt=""
+1243a1349,1351
+>                multiThorExclusionLockName=""
+>                multiThorMemoryThreshold=""
+>                multiThorPriorityLock="false"
+1244a1353
+>                nodeGroup=""
+1247,1248c1356,1358
+<                replicateAsync="false"
+<                replicateOutputs="false"
+---
+>                replicateAsync="true"
+>                replicateOutputs="true"
+>                slaveDownTimeout="300"
+1250a1361,1362
+>                smallSortThreshold="1024"
+>                verifyDaliConnectionInterval="300"
+1252,1253c1364,1369
+<                watchdogProgressEnabled="true">
+<    <Debug/>
+---
+>                watchdogProgressEnabled="true"
+>                watchdogProgressInterval="30">
+>    <Debug crcReadEnabled="true"
+>           crcWriteEnabled="true"
+>           dllsToSlaves="true"
+>           slaveDaliClient="false"/>
+1259,1261c1375,1384
+<    <SwapNode AutoSwapNode="false"/>
+<    <ThorMasterProcess computer="node002015" name="m1"/>
+<    <ThorSlaveProcess computer="node002015" name="s1"/>
+---
+>    <SwapNode AutoSwapNode="false"
+>              CheckAfterEveryJob="false"
+>              SwapNodeCheckMirrorDrive="true"
+>              SwapNodeCheckPrimaryDrive="true"
+>              SwapNodeInterval="24"
+>              SwapNodeMaxConcurrent="1"
+>              SwapNodeRestartJob="false"/>
+>    <ThorMasterProcess computer="node000027" name="m"/>
+>    <ThorSlaveProcess computer="node000027" name="s"/>
+>    <ThorSlaveProcess computer="node000028" name="s_2"/>

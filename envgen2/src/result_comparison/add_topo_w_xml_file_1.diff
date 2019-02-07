@@ -1,0 +1,7 @@
+1285a1286,1291
+>    <Cluster alias="" name="thor2" prefix="thor2">
+>     <EclAgentProcess process="myeclagent2"/>
+>     <EclCCServerProcess process="myeclccserver2"/>
+>     <EclSchedulerProcess process="myeclscheduler2"/>
+>     <ThorCluster process="mythor2"/>
+>    </Cluster>

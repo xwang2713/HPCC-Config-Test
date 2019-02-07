@@ -1,0 +1,38 @@
+757a758,773
+>    <EspBinding defaultForPort="true"
+>                defaultServiceVersion=""
+>                name="mydesdl"
+>                port="8043"
+>                protocol="http"
+>                resourcesBasedn="ou=EspServices,ou=ecl"
+>                service="dynamicesdl"
+>                type=""
+>                workunitsBasedn="ou=workunits,ou=ecl"
+>                wsdlServiceAddress="">
+>     <Authenticate access="Access"
+>                   description="DESDLServiceAccess"
+>                   path="/"
+>                   required="Read"
+>                   resource="Access"/>
+>    </EspBinding>
+992a1009,1028
+>    </Properties>
+>   </EspService>
+>   <EspService build="_"
+>               buildSet="DynamicESDL"
+>               description="My ESDL Based Web Service Interface"
+>               LoggingManager=""
+>               name="dynamicesdl"
+>               namespaceBase="urn:hpccsystems:ws"
+>               namespaceScheme="">
+>    <Properties bindingType="EsdlBinding"
+>                defaultPort="8043"
+>                defaultResourcesBasedn="ou=EspServices,ou=ecl"
+>                defaultSecurePort="18043"
+>                plugin="esdl_svc_engine"
+>                type="DynamicESDL">
+>     <Authenticate access="Access"
+>                   description="DESDLServiceAccess"
+>                   path="/"
+>                   required="Read"
+>                   resource="Access"/>
