@@ -1,0 +1,8 @@
+792c792
+<               enableSystemUseRewrite="false"
+---
+>               enableSystemUseRewrite="true"
+1111c1111
+<                 roxieMulticastEnabled="true"
+---
+>                 roxieMulticastEnabled="false"

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+aws_1()
+{
+   # Modify roxie attributes
+   #--------------------------
+   test_id=aws_roxie_attr
+   if [[ $verbose -ne 0 ]]
+   then
+      cat << EOF
+
+Modify Roxie attributes for AWS 
+envgen2 -env-in env_base.xml -env-out ${test_id}.xml -cloud aws" 
+EOF
+   fi
+   run_one_test -env-in ${in_dir}/env_base.xml -env-out ${out_dir}/${test_id}.xml -cloud aws 
+
+}

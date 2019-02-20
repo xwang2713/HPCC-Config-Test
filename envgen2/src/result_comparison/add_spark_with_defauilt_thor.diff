@@ -1,0 +1,30 @@
+35a36,39
+>   <Computer computerType="linuxmachine"
+>             domain="localdomain"
+>             name="node030043"
+>             netAddress="1.0.30.43"/>
+446a451,457
+>    <Instance computer="node030043"
+>              directory="/var/lib/HPCCSystems/mydafilesrv"
+>              name="s"
+>              netAddress="1.0.30.43"
+>              parallelRequestLimit="20"
+>              throttleCPULimit="75"
+>              throttleDelayMs="5000"/>
+1226a1238,1253
+>   <SparkThorProcess build="_"
+>                     buildSet="sparkthor"
+>                     name="myspark"
+>                     SPARK_EXECUTOR_CORES="1"
+>                     SPARK_EXECUTOR_MEMORY="1G"
+>                     SPARK_MASTER_PORT="7077"
+>                     SPARK_MASTER_WEBUI_PORT="8080"
+>                     SPARK_WORKER_CORES="1"
+>                     SPARK_WORKER_MEMORY="1G"
+>                     SPARK_WORKER_PORT="7071"
+>                     ThorClusterName="mythor">
+>    <Instance computer="node030043"
+>              directory="/var/lib/HPCCSystems/myspark"
+>              name="s"
+>              netAddress="1.0.30.43"/>
+>   </SparkThorProcess>

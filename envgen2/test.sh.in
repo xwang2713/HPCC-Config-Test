@@ -13,6 +13,8 @@ source ${SCRIPT_DIR}/rmv-node
 source ${SCRIPT_DIR}/esp-service
 source ${SCRIPT_DIR}/regression
 source ${SCRIPT_DIR}/misc
+source ${SCRIPT_DIR}/spark
+source ${SCRIPT_DIR}/aws
 
 ## Include test case
 
@@ -191,6 +193,10 @@ run_test_suite mod_binding
 run_test_suite rmv_binding
 
 run_test_suite add_backup
+
+run_test_suite add_spark_1
+
+run_test_suite aws_1
 
 if [[ $verbose -ne 2 ]] && [[ $show_input_only -ne 1 ]]
 then

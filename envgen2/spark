@@ -1,0 +1,32 @@
+#!/bin/bash
+
+
+add_spark_1()
+{
+   # Add a Spark Cluster
+   #--------------------------
+   test_id=add_spark_with_defauilt_thor
+   if [[ $verbose -ne 0 ]]
+   then
+      cat << EOF
+
+Add a spark cluster with the default thor 
+envgen2 -env-in env_base.xml -env-out ${test_id}.xml -add-node "spark#myspark@ip=1.0.30.43" 
+EOF
+   fi
+   run_one_test -env-in ${in_dir}/env_base.xml -env-out ${out_dir}/${test_id}.xml -add-node "spark#myspark@ip=1.0.30.43"
+
+
+   # Modify thor cluster name
+   #--------------------------
+   test_id=spark_modify_thor_name
+   if [[ $verbose -ne 0 ]]
+   then
+      cat << EOF
+
+Modify Thor cluster name 
+envgen2 -env-in env_base.xml -env-out ${test_id}.xml -mod "sw:spark#myspark@ThorClusterName=thor2" 
+EOF
+   fi
+
+}
