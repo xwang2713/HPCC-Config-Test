@@ -1,0 +1,66 @@
+35a36,43
+>   <Computer computerType="linuxmachine"
+>             domain="localdomain"
+>             name="node020020"
+>             netAddress="10.0.20.20"/>
+>   <Computer computerType="linuxmachine"
+>             domain="localdomain"
+>             name="node020011"
+>             netAddress="10.0.20.11"/>
+446a455,468
+>    <Instance computer="node020020"
+>              directory="/var/lib/HPCCSystems/mydafilesrv"
+>              name="s"
+>              netAddress="10.0.20.20"
+>              parallelRequestLimit="20"
+>              throttleCPULimit="75"
+>              throttleDelayMs="5000"/>
+>    <Instance computer="node020011"
+>              directory="/var/lib/HPCCSystems/mydafilesrv"
+>              name="s_2"
+>              netAddress="10.0.20.11"
+>              parallelRequestLimit="20"
+>              throttleCPULimit="75"
+>              throttleDelayMs="5000"/>
+576,579c598,599
+<    <Authentication checkViewPermissions="false"
+<                    getUserNameUnrestrictedResources="/favicon.ico,/esp/files/*,/esp/xslt/*"
+<                    getUserNameURL="/esp/files/GetUserName.html"
+<                    ldapAuthMethod="kerberos"
+---
+>    <Authentication htpasswdFile="/etc/HPCCSystems/.htpasswd"
+>                    ldapAuthMethod="simple"
+581,584c601,602
+<                    ldapServer=""
+<                    loginLogoURL="/esp/files/eclwatch/img/Loginlogo.png"
+<                    method="none"
+<                    passwordExpirationWarningDays="10"/>
+---
+>                    ldapServer="myldap"
+>                    method="ldaps"/>
+1005a1024,1048
+>   <LDAPServerProcess adminGroupName="HPCCAdmins160"
+>                      build="_"
+>                      buildSet="ldapServer"
+>                      cacheTimeout="5"
+>                      description="LDAP server process"
+>                      filesBasedn="ou=files,ou=ecl,ou=hpcc"
+>                      groupsBasedn="ou=groups,ou=hpcc"
+>                      ldapPort="389"
+>                      ldapSecurePort="636"
+>                      ldapTimeoutSecs="60"
+>                      modulesBasedn="ou=modules,ou=ecl"
+>                      name="myldap"
+>                      serverType="ActiveDirectory"
+>                      sharedCache="true"
+>                      sudoersBasedn="ou=SUDOers"
+>                      systemBasedn="cn=Users"
+>                      systemCommonName=""
+>                      systemPassword=""
+>                      systemUser=""
+>                      usersBasedn="ou=users,ou=ecl"
+>                      viewsBasedn="ou=views,ou=ecl"
+>                      workunitsBasedn="ou=workunits,ou=ecl">
+>    <Instance computer="node020020" name="s" netAddress="10.0.20.20"/>
+>    <Instance computer="node020011" name="s_2" netAddress="10.0.20.11"/>
+>   </LDAPServerProcess>

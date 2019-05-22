@@ -3,7 +3,32 @@
 <             domain="localdomain"
 <             name="node002015"
 <             netAddress="."/>
-439,447c435
+216a213,216
+>      <AuthenticateFeature description="Access to ws store service"
+>                           path="WsStoreAccess"
+>                           resource="WsStoreAccess"
+>                           service="ws_store"/>
+276a277,295
+>    <BuildSet deployable="no"
+>              installSet="deploy_map.xml"
+>              name="ws_store"
+>              path="componentfiles/ws_store"
+>              processName="EspService"
+>              schema="esp_service_wsstore.xsd">
+>     <Properties bindingType="ws_storeSoapBinding"
+>                 defaultPort="8511"
+>                 defaultResourcesBasedn="ou=WsStore,ou=EspServices,ou=ecl"
+>                 defaultSecurePort="18511"
+>                 plugin="ws_store"
+>                 type="ws_store">
+>      <Authenticate access="Read"
+>                    description="Root access to WS STORE service"
+>                    path="/"
+>                    required="Read"
+>                    resource="WsStoreAccess"/>
+>     </Properties>
+>    </BuildSet>
+439,447c458
 <                     version="1">
 <    <Instance computer="node002015"
 <              directory="/var/lib/HPCCSystems/mydafilesrv"
@@ -15,7 +40,7 @@
 <   </DafilesrvProcess>
 ---
 >                     version="1"/>
-452,458c440
+452,458c463
 <                      recoverFromIncErrors="true">
 <    <Instance computer="node002015"
 <              directory="/var/lib/HPCCSystems/mydali"
@@ -25,16 +50,16 @@
 <   </DaliServerProcess>
 ---
 >                      recoverFromIncErrors="true"/>
-468,471d449
+468,471d472
 <    <Instance computer="node002015"
 <              directory="/var/lib/HPCCSystems/mydfuserver"
 <              name="s1"
 <              netAddress="."/>
-497c475
+497c498
 <    <ServerList server="."/>
 ---
 >    <ServerList server=""/>
-515,520c493
+515,520c516
 <                    wuQueueName="myeclagent_queue">
 <    <Instance computer="node002015"
 <              directory="/var/lib/HPCCSystems/myeclagent"
@@ -43,7 +68,7 @@
 <   </EclAgentProcess>
 ---
 >                    wuQueueName="myeclagent_queue"/>
-531,536c504
+531,536c527
 <                       traceLevel="1">
 <    <Instance computer="node002015"
 <              directory="/var/lib/HPCCSystems/myeclccserver"
@@ -52,7 +77,7 @@
 <   </EclCCServerProcess>
 ---
 >                       traceLevel="1"/>
-541,546c509
+541,546c532
 <                        name="myeclscheduler">
 <    <Instance computer="node002015"
 <              directory="/var/lib/HPCCSystems/myeclscheduler"
@@ -61,13 +86,24 @@
 <   </EclSchedulerProcess>
 ---
 >                        name="myeclscheduler"/>
-774,778d736
+704a691,695
+>     <AuthenticateFeature authenticate="Yes"
+>                          description="Access to ws store service"
+>                          path="WsStoreAccess"
+>                          resource="WsStoreAccess"
+>                          service="ws_store"/>
+774,778d764
 <    <Instance computer="node002015"
 <              directory="/var/lib/HPCCSystems/myesp"
 <              FQDN=""
 <              name="s"
 <              netAddress="."/>
-999,1168c957
+909a896,899
+>     <AuthenticateFeature description="Access to ws store service"
+>                          path="WsStoreAccess"
+>                          resource="WsStoreAccess"
+>                          service="ws_store"/>
+999,1168c989
 <                   version="1">
 <    <Instance computer="node002015"
 <              directory="/var/lib/HPCCSystems/myftslave"
@@ -240,7 +276,7 @@
 <   </RoxieCluster>
 ---
 >                   version="1"/>
-1220,1262c1009
+1220,1262c1041
 <                       xrefMaxScanThreads="500">
 <    <Instance computer="node002015"
 <              directory="/var/lib/HPCCSystems/mysasha"
@@ -286,7 +322,7 @@
 <   </ThorCluster>
 ---
 >                       xrefMaxScanThreads="500"/>
-1268,1284d1014
+1268,1284d1046
 <    </Cluster>
 <    <Cluster alias="" name="thor" prefix="thor">
 <     <EclAgentProcess process="myeclagent"/>

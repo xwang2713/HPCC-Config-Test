@@ -24,6 +24,8 @@ configure_file(misc misc COPYONLY)
 configure_file(regression regression COPYONLY)
 configure_file(spark spark COPYONLY)
 configure_file(aws aws COPYONLY)
+configure_file(ldap ldap COPYONLY)
+
 configure_file(run_valgrind.in run_valgrind @ONLY)
 if (NOT ENVGEN2_BIN)
   set (ENVGEN2_BIN  "/opt/HPCCSystems/sbin/")

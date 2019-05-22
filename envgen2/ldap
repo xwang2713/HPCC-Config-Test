@@ -1,0 +1,35 @@
+#!/bin/bash
+
+
+ldap_1()
+{
+   # Create LDAPServerProcess
+   #--------------------------
+   test_id=add_ldap
+   if [[ $verbose -ne 0 ]]
+   then
+      cat << EOF
+
+Create LDAPServerProcess 
+envgen2 -env-in ${in_dir}/env_base.xml -env-out ${out_dir}/${test_id}.xml -add sw:ldap#myldap@esp=myesp^adminGroupName=HPCCAdmins160^cacheTimeout=5^filesBasedn="ou[equal]files,ou[equal]ecl,ou[equal]hpcc"^groupsBasedn="ou[equal]groups,ou[equal]hpcc"
+EOF
+   fi
+   run_one_test -env-in ${in_dir}/env_base.xml -env-out ${out_dir}/${test_id}.xml -add sw:ldap#myldap@esp=myesp^adminGroupName=HPCCAdmins160^cacheTimeout=5^filesBasedn="ou[equal]files,ou[equal]ecl,ou[equal]hpcc"^groupsBasedn="ou[equal]groups,ou[equal]hpcc"
+}
+
+ldap_2()
+{
+   # Add instances to LDAPServerProcess
+   #------------------------------------
+   test_id=add_ldap_nodes
+   if [[ $verbose -ne 0 ]]
+   then
+      cat << EOF
+
+Add instances to LDAPServerProcess 
+envgen2 -env-in ${out_dir}/add_ldap.xml -env-out ${out_dir}/${test_id}.xml -add-node ldap#myldap@ip="10.0.20.20;10.0.20.11" 
+EOF
+   fi
+   run_one_test -env-in ${out_dir}/add_ldap.xml -env-out ${out_dir}/${test_id}.xml -add-node ldap#myldap@ip="10.0.20.20;10.0.20.11"
+
+}

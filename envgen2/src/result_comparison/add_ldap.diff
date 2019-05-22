@@ -1,0 +1,39 @@
+576,579c576,577
+<    <Authentication checkViewPermissions="false"
+<                    getUserNameUnrestrictedResources="/favicon.ico,/esp/files/*,/esp/xslt/*"
+<                    getUserNameURL="/esp/files/GetUserName.html"
+<                    ldapAuthMethod="kerberos"
+---
+>    <Authentication htpasswdFile="/etc/HPCCSystems/.htpasswd"
+>                    ldapAuthMethod="simple"
+581,584c579,580
+<                    ldapServer=""
+<                    loginLogoURL="/esp/files/eclwatch/img/Loginlogo.png"
+<                    method="none"
+<                    passwordExpirationWarningDays="10"/>
+---
+>                    ldapServer="myldap"
+>                    method="ldaps"/>
+1005a1002,1023
+>   <LDAPServerProcess adminGroupName="HPCCAdmins160"
+>                      build="_"
+>                      buildSet="ldapServer"
+>                      cacheTimeout="5"
+>                      description="LDAP server process"
+>                      filesBasedn="ou=files,ou=ecl,ou=hpcc"
+>                      groupsBasedn="ou=groups,ou=hpcc"
+>                      ldapPort="389"
+>                      ldapSecurePort="636"
+>                      ldapTimeoutSecs="60"
+>                      modulesBasedn="ou=modules,ou=ecl"
+>                      name="myldap"
+>                      serverType="ActiveDirectory"
+>                      sharedCache="true"
+>                      sudoersBasedn="ou=SUDOers"
+>                      systemBasedn="cn=Users"
+>                      systemCommonName=""
+>                      systemPassword=""
+>                      systemUser=""
+>                      usersBasedn="ou=users,ou=ecl"
+>                      viewsBasedn="ou=views,ou=ecl"
+>                      workunitsBasedn="ou=workunits,ou=ecl"/>

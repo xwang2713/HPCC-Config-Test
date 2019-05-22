@@ -15,6 +15,7 @@ source ${SCRIPT_DIR}/regression
 source ${SCRIPT_DIR}/misc
 source ${SCRIPT_DIR}/spark
 source ${SCRIPT_DIR}/aws
+source ${SCRIPT_DIR}/ldap
 
 ## Include test case
 
@@ -197,6 +198,9 @@ run_test_suite add_backup
 run_test_suite add_spark_1
 
 run_test_suite aws_1
+
+run_test_suite ldap_1
+run_test_suite ldap_2
 
 if [[ $verbose -ne 2 ]] && [[ $show_input_only -ne 1 ]]
 then
